@@ -1068,7 +1068,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
 
 
 
-                txtLedgerName.setText(data.getStringExtra("nsName")+area+city);
+                txtLedgerName.setText(data.getStringExtra("nsName"));
                 txtLedgerName.setError(null);
                 txtAutoCompleteInventoryName.requestFocus();
             }
