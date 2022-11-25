@@ -74,6 +74,8 @@ public class ReportConsolidatedInventoryActivity extends BaseActivity implements
 
     CheckBox checkboxZeroValue;
 
+    int mPosition=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,6 +122,7 @@ public class ReportConsolidatedInventoryActivity extends BaseActivity implements
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        recyclerView.scrollToPosition(mPosition);
         myDataList = new JSONArray();
         myDataListColumns = new ArrayList<>();
         context=this;
@@ -275,6 +278,7 @@ public class ReportConsolidatedInventoryActivity extends BaseActivity implements
                                     myDataList = jsonData;
                                     myDataAdapter = new MyDataAdapter(context, myDataListColumns, jsonData, (MyDataAdapter.myAdapterListener) context, nsModule, "0");
                                     recyclerView.setAdapter(myDataAdapter);
+                                    recyclerView.scrollToPosition(mPosition);
                                 }
                             }
                         } catch (Exception e) {
@@ -339,6 +343,8 @@ public class ReportConsolidatedInventoryActivity extends BaseActivity implements
 
     @Override
     public void OnItemSelected(JSONObject item, int position) {
+        mPosition=position;
+        Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
         try {
             Toast.makeText(this, " "+item.getString("nsId"), Toast.LENGTH_SHORT).show();
 

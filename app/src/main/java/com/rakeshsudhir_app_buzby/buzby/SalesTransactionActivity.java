@@ -68,7 +68,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
     private ImageView imgTelephone,imgInfo,imgOldTransactions,imgLedgerTransactions,imgReceipt,imgPayment,imgGST;
     private AppCompatAutoCompleteTextView txtDate,txtLocation,txtLedgerName,txtLedgerNameAlias,txtAutoCompleteInventoryName,
             txtAutoCompleteInventoryQuantity,
-            txtAutoCompleteInventorySellingPrice,txtReminderDate,txtAutoCompleteInventoryCSGST,txtAutoCompleteInventoryIGST;
+            txtAutoCompleteInventorySellingPrice,txtReminderDate;
     private LinearLayout linearLayoutReceiptAmount,layoutLinearCSIGST;
     private Button btn_add_cart_details,btn_del_party_details,btn_save,btn_delete,btn_reprint,btn_i_details;
     private LinearLayout tableCartItems;
@@ -77,7 +77,6 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
     private EditText txtRemarks;
     private AppCompatSpinner spinnerPaymentMode;
     private CheckBox checkboxPrint,checkboxDeliver,checkboxTransport;
-    private TextInputLayout layoutCSGST,layoutIGST;
 
     CheckBox checkboxPrintGp;
 
@@ -803,8 +802,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
             objProduct.put("nsUnitSize", nsUnitSize);
             objProduct.put("nsInventoryId", nsInventoryId);
 
-            objProduct.put("nsCSGST", nsCSGST);
-            objProduct.put("nsIGST", nsIGST);
+
 
 
             //DialogUtility.showDialog(SalesTransactionActivity.this,jsonCartItems.toString(4),"");
@@ -878,6 +876,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
                 //vehicleNo = data.getStringExtra("nsRegistrationNumber");
@@ -894,6 +893,29 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
         }else if (requestCode == 2) {
             if (resultCode == RESULT_OK) {
                 //vehicleNo = data.getStringExtra("nsRegistrationNumber");
+
+
+                /*DialogUtility.showDialog(SalesTransactionActivity.this,
+                        data.getStringExtra("nsName")+"\n"
+                                +data.getStringExtra("nsId")+"\n"
+                                +data.getStringExtra("nsIsBlocked")+"\n"
+                                +data.getStringExtra("nsIsGSTCustomer")+"\n"
+                                +data.getStringExtra("nsIsRestricted")+"\n"
+                                +data.getStringExtra("nsIsCreditCustomer")+"\n"
+                                +data.getStringExtra("nsLedgerCategoryId")+"\n"
+                                +data.getStringExtra("nsBalance")+"\n"
+
+                                +data.getStringExtra("nsCompany")+"\n"
+                                +data.getStringExtra("nsGSTIN")+"\n"
+                                +data.getStringExtra("nsArea")+"\n"
+                                +data.getStringExtra("nsAreaId")+"\n"
+                                +data.getStringExtra("nsCity")+"\n"
+                                +data.getStringExtra("nsCityId")+"\n"
+
+                        ,"");*/
+
+
+
                 String customerStatus="";
                 if(data.getStringExtra("nsIsBlocked").equals("1")){
                     customerStatus+="BLOCKED";
@@ -938,7 +960,9 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
                     txtPaidAmount.setText(txtTotalAmount.getText().toString().trim());
                 }*/
 
-                if(!data.getStringExtra("nsArea").equals("")) {
+
+
+                if(!data.getStringExtra("nsAreaId").equals("")) {
                     area = " "+data.getStringExtra("nsArea");
                     areaid = data.getStringExtra("nsAreaId");
                 }else{
@@ -946,7 +970,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
                     areaid="";
                 }
 
-                if(!data.getStringExtra("nsCity").equals("")) {
+                if(!data.getStringExtra("nsCityId").equals("")) {
                     city=" "+data.getStringExtra("nsCity");
                     cityid=data.getStringExtra("nsCityId");
                 }else{
@@ -979,19 +1003,6 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
 
                 stateCode = data.getStringExtra("nsStateCode");
 
-                if(preferenceConfig.readCompanyCaption().equals("pms")) {
-                    layoutLinearCSIGST.setVisibility(View.VISIBLE);
-                    if (stateCode.equals("29")) {
-                        txtAutoCompleteInventoryIGST.setText("");
-
-                        layoutCSGST.setVisibility(View.VISIBLE);
-                        layoutIGST.setVisibility(View.INVISIBLE);
-                    } else {
-                        txtAutoCompleteInventoryCSGST.setText("");
-                        layoutCSGST.setVisibility(View.INVISIBLE);
-                        layoutIGST.setVisibility(View.VISIBLE);
-                    }
-                }
 
                // Toast.makeText(this, "RVS "+data.getStringExtra("nsIsRestricted"), Toast.LENGTH_SHORT).show();
 
@@ -1132,11 +1143,9 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
         txtAutoCompleteInventoryQuantity = (AppCompatAutoCompleteTextView)findViewById(R.id.txtAutoCompleteInventoryQuantity);
         txtAutoCompleteInventorySellingPrice = (AppCompatAutoCompleteTextView)findViewById(R.id.txtAutoCompleteInventorySellingPrice);
         txtReminderDate = (AppCompatAutoCompleteTextView)findViewById(R.id.txtReminderDate);
-        txtAutoCompleteInventoryIGST = (AppCompatAutoCompleteTextView)findViewById(R.id.txtAutoCompleteInventoryIGST);
-        txtAutoCompleteInventoryCSGST = (AppCompatAutoCompleteTextView)findViewById(R.id.txtAutoCompleteInventoryCSGST);
+
 
         linearLayoutReceiptAmount = (LinearLayout) findViewById(R.id.linearLayoutReceiptAmount);
-        layoutLinearCSIGST = (LinearLayout) findViewById(R.id.layoutLinearCSIGST);
 
         btn_add_cart_details = (Button) findViewById(R.id.btn_add_cart_details);
         btn_del_party_details = (Button) findViewById(R.id.btn_del_party_details);
@@ -1161,8 +1170,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
         checkboxTransport = (CheckBox)findViewById(R.id.checkboxTransport);
         tableCartItems = (LinearLayout)findViewById(R.id.tableCartItems);
 
-        layoutCSGST = (TextInputLayout)findViewById(R.id.layoutCSGST);
-        layoutIGST = (TextInputLayout)findViewById(R.id.layoutIGST);
+
 
     }
 
@@ -1542,16 +1550,8 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
 
                                                     nsSellingPrice = objDataBrand.getString("nsSellingPrice");
                                                     nsSellingPrice1 = objDataBrand.getString("nsSellingPrice");
-                                                    nsCSGST = objDataBrand.getString("nsCSGST");
-                                                    nsIGST = objDataBrand.getString("nsIGST");
-                                                    if(Integer.parseInt(nsCSGST)==0 && Integer.parseInt(nsIGST)==0){
-                                                        layoutLinearCSIGST.setVisibility(View.GONE);
-                                                    }else{
-                                                        layoutLinearCSIGST.setVisibility(View.VISIBLE);
-                                                    }
+
                                                     txtAutoCompleteInventorySellingPrice.setText(nsSellingPrice);
-                                                    txtAutoCompleteInventoryCSGST.setText(nsCSGST);
-                                                    txtAutoCompleteInventoryIGST.setText(nsIGST);
                                                     nsUnitSize = objDataBrand.getString("nsUnitSize");
                                                     nsInventoryId = objDataBrand.getString("nsId");
                                                     nsBaseSellingPrice = objDataBrand.getString("nsSellingPrice");
@@ -1682,8 +1682,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
                                                                 objItems.put("nsInventoryQuantity", "1");
                                                                 objItems.put("nsInventoryId", "14");
                                                                 objItems.put("nsInventoryPrice", chPrice);
-                                                                objItems.put("nsIGST", nsIGST);
-                                                                objItems.put("nsCSGST", nsCSGST);
+
                                                                 objItems.put("nsPriceVariation", "0");
                                                                 objItems.put("nsHamliPrice", "0");
 
@@ -1828,19 +1827,7 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
             txtAutoCompleteInventorySellingPrice.setText(item.getString("nsInventoryPrice"));
             n=position;
             nsSellingPrice = item.getString("nsInventoryPrice");
-            nsCSGST = item.getString("nsCSGST");
-            nsIGST = item.getString("nsIGST");
 
-            if(preferenceConfig.readCompanyCaption().equals("pms")){
-                layoutLinearCSIGST.setVisibility(View.VISIBLE);
-                if(Integer.parseInt(nsCSGST)>0){
-                    layoutCSGST.setVisibility(View.VISIBLE);
-                    txtAutoCompleteInventoryCSGST.setText(nsCSGST);
-                }else if(Integer.parseInt(nsIGST)>0){
-                    layoutIGST.setVisibility(View.VISIBLE);
-                    txtAutoCompleteInventoryIGST.setText(nsIGST);
-                }
-            }
 
             nsSellingPrice1 = item.getString("nsBaseSellingPrice");
             nsUnitSize=item.getString("nsUnitSize");
@@ -2032,8 +2019,6 @@ public class SalesTransactionActivity extends BaseActivity implements MyDataAdap
                                     objProductItems.put("nsInventoryName", objDataItem.getString("nsNameDuringTransaction"));
                                     objProductItems.put("nsInventoryQuantity", objDataItem.getString("nsQuantity"));
                                     objProductItems.put("nsInventoryPrice", objDataItem.getString("nsPrice"));
-                                    objProductItems.put("nsIGST", objDataItem.getString("nsIGST"));
-                                    objProductItems.put("nsCSGST", objDataItem.getString("nsCSGST"));
                                     objProductItems.put("nsUnitSize", objDataItem.getString("nsUnitSize"));
                                     objProductItems.put("nsInventoryId", objDataItem.getString("nsInventoryId"));
                                     objProductItems.put("nsBaseSellingPrice", objDataItem.getString("nsBaseSellingPrice"));

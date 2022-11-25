@@ -2070,7 +2070,7 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
             if(nsSubModule.equals("returnValue")) {
                 Intent i = new Intent();
                 try {
-                    i.putExtra("nsName",item.getString("nsName"));
+                    i.putExtra("nsName",item.getString("nsNameLedger"));
                     i.putExtra("nsId",item.getString("nsId"));
                     i.putExtra("nsIsBlocked",item.getString("nsIsBlocked"));
                     i.putExtra("nsIsGSTCustomer",item.getString("nsIsGSTCustomer"));
