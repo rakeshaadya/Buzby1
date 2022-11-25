@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="24"
+    android:id="@+id/temp111">
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblSno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="sno"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/billDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="Date"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4.5"
+        android:text="Shop"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7.5"
+        android:text="Name"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Amount"/>
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+</LinearLayout>

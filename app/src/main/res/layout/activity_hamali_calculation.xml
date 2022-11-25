@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HamaliCalculation">
+
+    <include
+        android:id="@+id/tool1"
+        layout="@layout/app_bar_dashboard_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutUPITableHeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_grey_500"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_blue_100">
+                    <include
+                        layout="@layout/recycler_list_hamali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_grey_500"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="20">
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+
+                <TextView
+                    style="@style/table_textview_style_for_report"
+                    android:id="@+id/lblSno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text=""/>
+
+
+
+                <TextView
+                    style="@style/table_textview_style_for_hamali_right"
+                    android:id="@+id/lblName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:text="Other Charges"/>
+
+
+
+                <TextView
+                    style="@style/table_textview_style_for_report"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text=""/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+                <EditText
+                    android:id="@+id/txtOtherAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:inputType="number"
+                    android:text="0.0"
+                    android:selectAllOnFocus="true"
+                    style="@style/table_textview_style_right"
+                    android:background="@null"/>
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="20">
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+
+                <TextView
+                    style="@style/table_textview_style_for_report"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text=""/>
+
+
+
+                <TextView
+                    style="@style/table_textview_style_for_hamali_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:text="Total"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+                <TextView
+                    style="@style/table_textview_style_for_report"
+                    android:id="@+id/lblTQty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text=""/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+                <TextView
+                    style="@style/table_textview_style_for_hamali_right"
+                    android:id="@+id/lblTAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text=""/>
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_grey_500"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <EditText
+                    android:id="@+id/txtRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remarks"
+                    android:lines="3"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

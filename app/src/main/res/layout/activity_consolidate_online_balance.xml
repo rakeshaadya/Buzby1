@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ConsolidateOnlineBalanceActivity">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/app_bar_dashboard_"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginBottom="30dp">
+    <LinearLayout
+
+        android:id="@+id/inventory_item_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_grey_500" />
+
+        <include
+            layout="@layout/recycler_list_report_consolidated_online_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_grey_500" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_grey_500" />
+
+        <LinearLayout
+            android:id="@+id/layoutTotals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@+id/bottom_navigation"
+            android:weightSum="24">
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+
+            <TextView
+                style="@style/table_textview_style_for_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text=""/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+
+            <TextView
+                style="@style/table_textview_style_for_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text=""/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+            <TextView
+                style="@style/table_textview_style_for_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:text=""/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+            <TextView
+                style="@style/table_textview_style_for_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7.5"
+                android:text="Total"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+            <TextView
+                style="@style/table_textview_style_for_report"
+                android:id="@+id/lblTotalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=""/>
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_500"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_grey_500" />
+
+
+        <TextView
+            android:layout_below="@+id/inventory_item_list_layout"
+            android:id="@+id/lblMessage"
+            android:layout_width="match_parent"
+            android:text=""
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/md_grey_700"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="40dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:background="@color/md_grey_700"/>
+
+</RelativeLayout>

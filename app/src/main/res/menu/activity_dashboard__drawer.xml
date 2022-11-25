@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+    <item android:title="Transactions"
+        android:id="@+id/headTransaction">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_sales_order"
+                    android:title="Sales Order"
+
+                    android:icon="@drawable/menusalesorder"/>
+
+                <item
+                    android:id="@+id/nav_sales"
+                    android:title="Sales"
+                    android:icon="@drawable/ic_sales"/>
+
+                <item
+                    android:id="@+id/nav_receipt"
+                    android:title="Receipt/Payment"
+                    android:icon="@drawable/ic_receipt"/>
+
+                <item
+                    android:id="@+id/nav_purchase"
+                    android:title="Purchase"
+                    android:icon="@drawable/ic_product"/>
+
+                <item
+                    android:id="@+id/nav_salesUndelivered"
+                    android:title="Undelivered"
+                    android:icon="@drawable/ic_undelivered"/>
+
+                <item
+                    android:id="@+id/nav_salesDeliveredList"
+                    android:title="Delivered List"
+                    android:icon="@drawable/ic_delivered"/>
+
+                <item
+                    android:id="@+id/nav_StockTransfer"
+                    android:title="Stock Transfer"
+                    android:icon="@drawable/ic_stocktransfer"/>
+
+                <item
+                    android:id="@+id/nav_expenses"
+                    android:title="Expenses"
+                    android:icon="@drawable/ic_rich"/>
+
+
+
+                <item
+                    android:id="@+id/nav_opening_cash"
+                    android:title="Opening Cash"
+                    android:icon="@drawable/openingcash"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Reports"
+        android:id="@+id/headReports">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_consolidated_ledger_balance_report"
+                    android:title="Ledger Transaction"
+                    android:icon="@drawable/ledgertransaction"/>
+
+                <item
+                    android:id="@+id/nav_price_variation"
+                    android:title="Price Variation"
+                    android:icon="@drawable/ic_payment"/>
+
+                <item
+                    android:id="@+id/nav_consolidated_inventory_report"
+                    android:title="Stock Report"
+                    android:icon="@drawable/stockreport"/>
+
+                <item
+                    android:id="@+id/nav_stock_management"
+                    android:title="Stock Management"
+                    android:icon="@drawable/stockmanagement"/>
+
+                <item
+                    android:id="@+id/nav_reminders"
+                    android:title="Payment Reminders"
+                    android:icon="@drawable/paymentreminder"/>
+
+                <item
+                    android:id="@+id/nav_online_balance"
+                    android:title="Online Transfers"
+                    android:icon="@drawable/onlinetransfer"/>
+
+                <item
+                    android:id="@+id/nav_upi_payment_receipt"
+                    android:title="UPI Payment"
+                    android:icon="@drawable/ic_upipayment"/>
+
+                <item
+                    android:id="@+id/nav_hamali_calculation"
+                    android:title="Hamali Calculation"
+                    android:icon="@drawable/hamalicalculation"/>
+
+                <item
+                    android:id="@+id/nav_day_report"
+                    android:title="Day Report"
+                    android:icon="@drawable/dayreport"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Masters"
+        android:id="@+id/headMaster">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_location"
+                    android:title="Location"
+                    android:icon="@drawable/ic_location"/>
+
+                <item
+                    android:id="@+id/nav_ledger"
+                    android:title="Ledger"
+                    android:icon="@drawable/ic_ledger"/>
+
+                <item
+                    android:id="@+id/nav_Inventory"
+                    android:title="Inventory"
+                    android:icon="@drawable/ic_inventory"/>
+
+                <item
+                    android:id="@+id/nav_closing_stock"
+                    android:title="Closing Stock"
+                    android:icon="@drawable/closingstock"/>
+
+                <item
+                    android:id="@+id/nav_safteyStock"
+                    android:title="Saftey Stock"
+                    android:icon="@drawable/safteystock"/>
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="General"
+        android:id="@+id/headGeneral">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_OpeningStock"
+                    android:title="Opening Stock"
+                    android:icon="@drawable/ic_openingstock"/>
+
+                <item
+                    android:id="@+id/nav_OpeningLedgerBalance"
+                    android:title="Opening Ledger Balance"
+                    android:icon="@drawable/opledgerbalance"/>
+
+                <item
+                    android:id="@+id/nav_set_default_location"
+                    android:title="Change Default Location"
+                    android:icon="@drawable/ic_default_location"/>
+
+                <item
+                    android:id="@+id/nav_user_role_management"
+                    android:title="Role Management"
+                    android:icon="@drawable/ic_role"/>
+
+                <item
+                    android:id="@+id/nav_position"
+                    android:title="User Position"
+                    android:icon="@drawable/ic_userposition"/>
+
+                <item
+                    android:id="@+id/nav_users"
+                    android:title="Users"
+                    android:icon="@drawable/ic_person"/>
+
+                <item
+                    android:id="@+id/nav_expense_head"
+                    android:title="Expense Type"
+                    android:icon="@drawable/ic_expensehead"/>
+
+                <item
+                    android:id="@+id/nav_android_id"
+                    android:title="Unique ID"
+                    android:icon="@drawable/ic_phone"/>
+
+                <item
+                    android:id="@+id/nav_module"
+                    android:title="Modules"
+                    android:icon="@drawable/ic_modules"
+                    android:visible="false"/>
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/ic_logout"/>
+            </group>
+        </menu>
+    </item>
+
+
+
+
+
+</menu>

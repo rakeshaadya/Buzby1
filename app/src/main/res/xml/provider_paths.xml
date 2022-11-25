@@ -1,0 +1,27 @@
+<!--
+<paths>
+    <files-path
+        name="data"
+        path="."/>
+
+    <external-path
+        name="scale"
+        path="."/>
+    <external-path
+        name="myFile"
+        path="temps"/>
+</paths>-->
+
+
+<paths>
+
+    <files-path name="data" path="."/>
+    <external-path name="scale" path="."/>
+    <external-path name="myFile" path="temps"/>
+    <external-path name="external" path="." />
+    <external-files-path name="external_files" path="." />
+    <cache-path name="cache" path="." />
+    <external-cache-path name="external_cache" path="." />
+    <files-path name="files" path="." />
+
+</paths>

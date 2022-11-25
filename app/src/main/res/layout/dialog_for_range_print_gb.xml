@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/md_white_1000">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myFilterToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llDriverAdvanceDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginRight="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/txtAutoCompleteInventoryQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:hint="Quantity"
+                    android:selectAllOnFocus="true"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/chk2"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:weightSum="9">
+
+                <CheckBox
+                    android:id="@+id/chkBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bill"
+                    android:textSize="12sp"
+                    android:layout_weight="3"/>
+
+                <CheckBox
+                    android:id="@+id/chkGP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GP"
+                    android:textSize="12sp"
+                    android:layout_weight="3"/>
+
+                <CheckBox
+                    android:id="@+id/chkDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivered"
+                    android:textSize="12sp"
+                    android:layout_weight="3"/>
+
+            </LinearLayout>
+
+            <!--<Button
+                android:id="@+id/btn_save"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:text="SAVE"
+                android:textSize="12dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/save_rounded_button"
+                android:layout_gravity="center"
+                android:gravity="center"/>-->
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

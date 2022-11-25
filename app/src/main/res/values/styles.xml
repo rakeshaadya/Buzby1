@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/md_blue_grey_500</item>
+        <item name="android:fontFamily">@font/nunitoregular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--For custom Rounded Buttons-->
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/rounded_shape</item>
+    </style>
+
+    <!--For Custom outline color-->
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="TextAppearance44">
+        <item name="android:textColor">@color/md_red_A400</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="table_textview_style" parent="@android:style/TextAppearance">
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="table_textview_style_right" parent="@android:style/TextAppearance">
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/md_green_500</item>
+        <item name="android:background">@drawable/input_edit_text_background</item>
+        <!--<item name="android:textColorHint">@color/splahbgcolor</item>-->
+    </style>
+
+    <style name="TextAppearancePaidAmount">
+        <item name="android:textColor">@color/md_green_500</item>
+        <item name="android:background">@drawable/input_edit_text_paid_amount</item>
+        <!--<item name="android:textColorHint">@color/splahbgcolor</item>-->
+    </style>
+
+    <style name="TextAppearanceLightBlue">
+        <item name="android:textColor">@color/md_green_500</item>
+        <item name="android:background">@drawable/input_edit_text_paid_amount</item>
+        <!--<item name="android:textColorHint">@color/splahbgcolor</item>-->
+    </style>
+
+    <style name="TextAppearanceBalance">
+        <item name="android:textColor">@color/md_green_500</item>
+        <item name="android:background">@drawable/input_edit_text_bal_amt</item>
+        <!--<item name="android:textColorHint">@color/splahbgcolor</item>-->
+    </style>
+
+    <style name="table_textview_style_for_report" parent="@android:style/TextAppearance">
+        <item name="android:paddingTop">10sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="table_textview_style_for_hamali_left" parent="@android:style/TextAppearance">
+        <item name="android:paddingTop">10sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:paddingLeft">5sp</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="kaushanscriptregular">
+        <item name="android:layout_width">match_parent</item>
+            <item name="android:textStyle">bold</item>
+        <!--<item name="android:fontFamily">@font/kaushanscriptregular</item>-->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="table_textview_style_for_hamali_right" parent="@android:style/TextAppearance">
+        <item name="android:paddingTop">10sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:paddingRight">5sp</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="table_view_horizontal_style" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingRight">1dp</item>
+        <item name="android:background">@color/md_grey_300</item>
+    </style>
+
+
+
+
+</resources>

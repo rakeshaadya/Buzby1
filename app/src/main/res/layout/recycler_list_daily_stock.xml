@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        card_view:contentPadding="10dp">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:id="@+id/lblDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="99-99-9999"
+                            android:textStyle="bold"
+                            android:layout_weight="3"/>
+
+                        <TextView
+                            android:id="@+id/lblType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="999"
+                            android:layout_weight="3"/>
+
+
+                        <TextView
+                            android:id="@+id/lblLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Location"
+                            android:gravity="right"
+                            android:textStyle="bold"
+                            android:layout_weight="3"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:id="@+id/lblInventory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Inventory"
+                            android:textStyle="bold"
+                            android:layout_weight="3"/>
+
+                        <TextView
+                            android:id="@+id/lblQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:layout_weight="6"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:id="@+id/lblStack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="999"
+                            android:textStyle="bold"
+                            android:layout_weight="3"/>
+
+                        <TextView
+                            android:id="@+id/lblUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="User"
+                            android:gravity="right"
+                            android:layout_weight="6"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rakeshsudhir_app_buzby.buzby">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEDGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_accounting"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_accounting"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.PrintActivity"></activity>
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.DeviceActivityList" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.DayReportActivity" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.MasterActivity" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.MasterExpenseActivity" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.HamaliCalculation" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.OpeningCashBalance" />
+        <activity android:name="com.rakeshsudhir_app_buzby.buzby.UpdateReminderActivity" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.upiPaymentReceiptActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.SortAndFilterActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.ConsolidateOnlineBalanceActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.StockManagementActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.ReportConsolidatedInventoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.ClosingStockActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.DeliveredActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.UndeliveredListActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.StockTransferActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.ReceiptPaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.TransactionPurchaseActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.SalesOrderActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.SalesTransactionActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.TransactionOpeningLedgerBalance"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.TransactionOpeningStock"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterModules"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.UserPositionRolesList"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterInventorySubCategoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterInventoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterLedgerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.UserRoleManagementActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.AndroidIDActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.MasterOneActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.ListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.DashboardActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.rakeshsudhir_app_buzby.buzby.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.rakeshsudhir_app_buzby.buzby.BluetoothServices"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.rakeshsudhir_app_buzby.buzby.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

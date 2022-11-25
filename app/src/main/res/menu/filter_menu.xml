@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_filter_today" android:title="Today"/>
+    <item android:id="@+id/menu_filter_month" android:title="This Month"/>
+    <item android:id="@+id/menu_filter_fy_year" android:title="This Financial Year"/>
+    <item android:id="@+id/menu_filter_quarter" android:title="This Quarter"/>
+    <item android:id="@+id/menu_filter_no_filter" android:title="No Filter"/>
+    <!--<item android:id="@+id/menu_option_Booking" android:title="Booking"/>-->
+</menu>

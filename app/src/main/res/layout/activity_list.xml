@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+    <include
+        android:id="@+id/tool1"
+        layout="@layout/app_bar_dashboard_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_below="@+id/tool1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutUPITableHeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/recycler_list_report_upi_payment_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInventoryDetailedReportTableHeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/lblTotalSales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Sales : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <TextView
+                    android:id="@+id/lblTotalDelivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Delivered : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <TextView
+                    android:id="@+id/lblTotalUnDelivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total UnDelivered : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+            </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:weightSum="9">
+
+                <TextView
+                    android:id="@+id/lblTotalPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Purchase : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <TextView
+                    android:id="@+id/lblTotalStockOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Stock Out : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <TextView
+                    android:id="@+id/lblTotalStockIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Stock In : "
+                    android:layout_weight="3"
+                    android:textSize="11dp"
+                    android:textColor="@color/md_black_1000"/>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/report_inventory_detailed_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPriceVariation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/recycler_list_price_variation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStockManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/recycler_list_transaction_stock_management"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLedgerBalanceTableHeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <!--android:visibility="gone"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:weightSum="10">
+
+                <CheckBox
+                    android:id="@+id/checkboxZeroBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Include Zero Balance"
+                    android:layout_weight="5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="5">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="5"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/txtRange"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:textSize="10sp"
+                            android:hint="Range"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnGo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/save_rounded_button"
+                        android:text="Go"
+                        android:layout_weight="5"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/md_white_1000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/table_consolidated_ledger_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLedgerTransactionTableHeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_blue_100">
+                <include
+                    layout="@layout/table_ledger_transaction_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_500"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/swipe_refresh_layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/md_grey_700"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        app:labelVisibilityMode="unlabeled"
+        android:visibility="gone"
+        app:itemIconSize="40dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:background="@color/md_grey_700"/>
+
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</RelativeLayout>

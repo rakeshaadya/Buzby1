@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="19"
+    android:id="@+id/temp111">
+
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="Date"/>
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.5"
+        android:text="Type"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblDebit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.3"
+        android:text="Debit"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.3"
+        android:text="Credit"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkboxReceiptPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1.9"
+        android:visibility="invisible"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+
+    <TextView
+        android:id="@+id/lblRunningTotal"
+        style="@style/table_textview_style_for_report"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="Balance" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <!--<TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Balance"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />-->
+
+
+</LinearLayout>

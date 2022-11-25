@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Buzby</string>
+
+    <!--sharedpreference-->
+    <string name="login_preference">com.rakeshsudhir_app_buzby.buzby_Login</string>
+    <string name="login_status">com.rakeshsudhir_app_buzby.buzby_Status</string>
+    <string name="nsId">ns_Id</string>
+    <string name="nsName">ns_Name</string>
+    <string name="nsUserPosition">ns_User_Position</string>
+    <string name="nsCompany">ns_Company</string>
+    <string name="nsCompanyCaption">ns_Company_Caption</string>
+    <string name="nsAndroidUQ">ns_AndroidUQ</string>
+    <string name="nsLoginDate">ns_login_date</string>
+    <string name="locationName">ns_Location_Name</string>
+    <string name="locationId">ns_LocationId</string>
+
+    <string name="bluetoothDeviceName">com.example.me4u_ bluetoothMacAddress</string>
+
+    <!--Navigation Drawer-->
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_list">ListActivity</string>
+</resources>

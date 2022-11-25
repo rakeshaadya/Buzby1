@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_rounded_button"
+        android:text="Delete"
+        android:layout_marginRight="5dp"
+        android:layout_weight="5"
+        android:textColor="@color/md_white_1000"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save_rounded_button"
+        android:text="Save"
+        android:layout_weight="5"
+        android:textColor="@color/md_white_1000"/>
+
+    <Button
+        android:id="@+id/btnRePrint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reprint_rounded_button"
+        android:text="Reprint"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="5"
+        android:textColor="@color/md_white_1000"
+        android:visibility="gone"/>
+
+</LinearLayout>

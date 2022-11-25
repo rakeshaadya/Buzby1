@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="13">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+    <TextView
+        style="@style/table_textview_style"
+        android:id="@+id/lblSno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:text="SN"
+        />
+
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+    <TextView
+        style="@style/table_textview_style"
+        android:id="@+id/lblInvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.5"
+        android:gravity="center"
+        android:text="Name"
+        android:textSize="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <View
+
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+    <TextView
+        style="@style/table_textview_style"
+        android:id="@+id/lblQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Qty"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        style="@style/table_textview_style"
+        android:id="@+id/lblPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+    <TextView
+        style="@style/table_textview_style"
+        android:id="@+id/lblAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:textSize="10dp"
+        android:gravity="right"
+        android:text="Amount"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+
+
+</LinearLayout>

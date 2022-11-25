@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_new"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    card_view:contentPadding="5dp"
+    card_view:contentPaddingBottom="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingLeft="7dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="7.5">
+
+                    <TextView
+                        android:id="@+id/lblCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shree Padmamba Transport Shree Padmamba Transport"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textColor="@color/md_black_1000"
+                        />
+                    <!--<View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        style="@style/table_view_horizontal_style_sales"/>
+
+                    &lt;!&ndash;<androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_phone"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>&ndash;&gt;
+                    <TextView
+                        android:id="@+id/lblPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" 9538425281"
+                        android:textIsSelectable="true"
+                        android:clickable="true"
+                        android:textSize="11sp"/>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.5">
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trip No : "
+                        android:textSize="11sp"/>-->
+
+                    <TextView
+                        android:id="@+id/lblVoucherNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11"
+                        android:gravity=""
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nunitobold"
+                        android:textColor="@color/md_blue_800"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : "
+                        android:textSize="11sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/lblDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02-02-2020"
+                        android:textSize="11sp"
+                        />
+
+
+                    <!--<LinearLayout
+                        android:id="@+id/llEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            style="@style/table_view_horizontal_style_sales"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date : "
+                            android:layout_marginLeft="5dp"
+                            android:textSize="10sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02-02-2020"
+                            android:textSize="10sp"/>
+                    </LinearLayout>-->
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/lblPaymentType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:textAllCaps="true"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="@color/md_black_1000"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/lblTransactionType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/md_white_1000"
+                    android:background="@color/md_green_600"/>
+
+
+                <TextView
+                    android:id="@+id/lblAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="32587"
+                    android:textSize="12sp"
+                    android:textColor="@color/md_teal_900"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="7"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="18">
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+        <TextView
+            android:id="@+id/lblSno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="S.no"
+
+            style="@style/table_textview_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+        <TextView
+            android:id="@+id/lblProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:text="Products"
+            style="@style/table_textview_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+        <TextView
+            android:id="@+id/txtQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:layout_weight="3"
+            style="@style/table_textview_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+
+        <TextView
+            android:id="@+id/lblPending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:layout_weight="3"
+            style="@style/table_textview_style"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+        <EditText
+            android:id="@+id/txtDelivered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            style="@style/table_textview_style"
+            android:background="@null"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/table_view_horizontal_style"/>
+
+    </LinearLayout>
+
+</LinearLayout>

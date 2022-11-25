@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/llTableView"
+    android:weightSum="20">
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblSno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:text="Sno"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.2"
+        android:text="Name"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblOpeningStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.2"
+        android:text="OP"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblAccountingStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="AS"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblPhysicalStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.6"
+        android:text="PS"/>
+
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblClosingManual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.6"
+        android:text="CO-M"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+
+    <TextView
+        style="@style/table_textview_style_for_report"
+        android:id="@+id/lblClosingDiffrence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.6"
+        android:text="Diff"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_500"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"/>
+
+</LinearLayout>

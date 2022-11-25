@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_filter_sales_order"
+        android:title="Sales Order"
+        android:enabled="true"
+        android:icon="@drawable/menusalesorder"/>
+    <item
+        android:id="@+id/menu_filter_sales"
+        android:title="Sales"
+        android:icon="@drawable/ic_sales"/>
+    <item
+        android:id="@+id/menu_filter_receipt"
+        android:title="Receipt/Payment"
+        android:icon="@drawable/ic_receipt"/>
+    <item
+        android:id="@+id/menu_filter_undelivered"
+        android:title="Undelivered"
+        android:icon="@drawable/ic_undelivered"/>
+    <item
+        android:id="@+id/menu_filter_purchase"
+        android:title="Purchase"
+        android:icon="@drawable/ic_product"/>
+    <!--<item android:id="@+id/menu_option_Booking" android:title="Booking"/>-->
+</menu>
