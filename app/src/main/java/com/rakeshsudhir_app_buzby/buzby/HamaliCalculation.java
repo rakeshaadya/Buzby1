@@ -56,6 +56,7 @@ public class HamaliCalculation extends BaseActivity implements MyDataAdapter.myA
     EditText txtOtherAmount,txtRemarks;
     TextView lblTQty,lblTAmount;
     JSONArray jsonData;
+    //Rakesh Sudhir
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
