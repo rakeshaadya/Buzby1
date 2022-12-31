@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.widget.Toast;
 
 import androidx.core.content.FileProvider;
 
@@ -60,7 +61,7 @@ public class ExportDataGeneral {
             File fileLocation = new File(activity.getFilesDir(),nsModule.replace(" ","_")+".csv");
 
 
-            Uri path = FileProvider.getUriForFile(context,"com.rakeshsudhir_app_pms.buzby.fileprovider",fileLocation);
+            Uri path = FileProvider.getUriForFile(context,"com.rakeshsudhir_app_buzby.buzby.fileprovider",fileLocation);
             Intent fileIntent = new Intent(Intent.ACTION_SEND);
             fileIntent.setType("text/text");
             fileIntent.putExtra(Intent.EXTRA_SUBJECT,nsModule+".csv");
@@ -72,6 +73,7 @@ public class ExportDataGeneral {
 
         }catch (Exception e){
             e.printStackTrace();
+            Toast.makeText(activity, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -173,6 +175,7 @@ public class ExportDataGeneral {
                 }*/
             } catch (JSONException e) {
                 e.printStackTrace();
+                Toast.makeText(activity, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         //}
 
@@ -205,7 +208,7 @@ public class ExportDataGeneral {
             File fileLocation = new File(activity.getFilesDir(),nsModule.replace(" ","_")+".csv");
 
 
-            Uri path = FileProvider.getUriForFile(context,"com.rakeshsudhir_app_pms.buzby.fileprovider",fileLocation);
+            Uri path = FileProvider.getUriForFile(context,"com.rakeshsudhir_app_buzby.buzby.fileprovider",fileLocation);
             Intent fileIntent = new Intent(Intent.ACTION_SEND);
             fileIntent.setType("text/text");
             fileIntent.putExtra(Intent.EXTRA_SUBJECT,nsModule+".csv");
@@ -217,6 +220,7 @@ public class ExportDataGeneral {
 
         }catch (Exception e){
             e.printStackTrace();
+            Toast.makeText(activity, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }

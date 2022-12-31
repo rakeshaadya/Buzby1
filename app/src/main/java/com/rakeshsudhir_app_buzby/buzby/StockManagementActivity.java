@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +49,7 @@ public class StockManagementActivity extends BaseActivity {
     private ProgressDialog progress;
     private String nsModule="",nsId="0",inventory_id="",inventory_name="",location_id="",location_name="",nsQuantity="";
     private String returnToList="";
+    private EditText txtRemarks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,7 @@ public class StockManagementActivity extends BaseActivity {
         btnSave = (Button)findViewById(R.id.btnSave);
         btnDelete = (Button)findViewById(R.id.btnDelete);
         lblMessage = (TextView) findViewById(R.id.lblMessage);
+        txtRemarks = (EditText) findViewById(R.id.txtRemarks);
 
         txtInventory.requestFocus();
 
@@ -160,6 +163,7 @@ public class StockManagementActivity extends BaseActivity {
                     objItems.put("prInventoryId", inventory_id);
                     objItems.put("prReturnToList", returnToList);
                     objItems.put("prQuantity", txtQuantity.getText().toString().trim());
+                    objItems.put("prRemarks", txtRemarks.getText().toString().trim());
                     jsonArrObjItems.put(objItems);
 
                     //DialogUtility.showDialog(TransactionOpeningStock.this,jsonArrObjItems.toString(4),"");
@@ -218,6 +222,9 @@ public class StockManagementActivity extends BaseActivity {
                                     txtInventory.setText(objData.getString("nsName"));
                                     inventory_id = objData.getString("nsInventoryId");
                                     txtQuantity.setText(objData.getString("nsQuantity"));
+                                    if(!objData.isNull("nsRemarks")){
+                                        txtRemarks.setText(objData.getString("nsRemarks"));
+                                    }
                                     Date d = ConvertFunctions.convertDatabaseDateStringToDate(objData.getString("nsDate"));
                                     txtDate.setText(new SimpleDateFormat("dd-MM-yyyy").format(d));
                                 }

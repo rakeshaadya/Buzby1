@@ -295,14 +295,14 @@ public class ReceiptPaymentActivity extends BaseActivity implements MyDataAdapte
                 if(position==1){
                     layoutMain.setBackgroundColor(Color.parseColor("#FAFAD2"));
                     toolbar.setTitle("Receipt");
-                    setSupportActionBar(toolbar);
+                    //setSupportActionBar(toolbar);
                 }else if(position==2){
                     layoutMain.setBackgroundColor(Color.parseColor("#e0f3ff"));
                     toolbar.setTitle("Payment");
-                    setSupportActionBar(toolbar);
+                    //setSupportActionBar(toolbar);
                 }else{
                     toolbar.setTitle("Receipt/Payment");
-                    setSupportActionBar(toolbar);
+                    /*setSupportActionBar(toolbar);*/
                 }
             }
 
@@ -504,6 +504,8 @@ public class ReceiptPaymentActivity extends BaseActivity implements MyDataAdapte
             btnDelete.setVisibility(View.GONE);
         }
 
+        setSupportActionBar(toolbar);
+
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -563,7 +565,7 @@ public class ReceiptPaymentActivity extends BaseActivity implements MyDataAdapte
 
                 ledgerid = data.getStringExtra("nsId");
 
-                txtCustomerName.setText(data.getStringExtra("nsName")+area+city);
+                txtCustomerName.setText(data.getStringExtra("nsName"));
                 txtCustomerName.setError(null);
                 txtAmount.requestFocus();
 

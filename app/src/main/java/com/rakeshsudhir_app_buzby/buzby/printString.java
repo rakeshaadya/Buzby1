@@ -390,6 +390,10 @@ public class printString {
                     BILL = BILL + "\n" + String.format("%1$19s %2$11s", "Balance : ", balance);
                 }
 
+                if(balance>0){
+                    BILL = BILL + "\n\nNote: Request you to clear Balance\n     within 10days of Billing Date";
+                }
+
 
                 BILL = BILL
                         + "\n-------------------------------";

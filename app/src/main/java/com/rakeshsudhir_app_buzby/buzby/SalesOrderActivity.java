@@ -721,7 +721,7 @@ public class SalesOrderActivity extends BaseActivity implements MyDataAdapter.my
                 }
 
 
-                txtLedgerName.setText(data.getStringExtra("nsName")+area+city);
+                txtLedgerName.setText(data.getStringExtra("nsName"));
                 txtLedgerName.setError(null);
                 txtAutoCompleteInventoryName.requestFocus();
             }

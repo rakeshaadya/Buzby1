@@ -168,7 +168,7 @@ public class TransactionOpeningLedgerBalance extends BaseActivity {
                 ledgerid = data.getStringExtra("nsId");
 
 
-                txtLedgerName.setText(data.getStringExtra("nsName")+" "+data.getStringExtra("nsCity"));
+                txtLedgerName.setText(data.getStringExtra("nsName"));
                 txtLedgerName.setError(null);
             }
             if (requestCode == RESULT_CANCELED) {

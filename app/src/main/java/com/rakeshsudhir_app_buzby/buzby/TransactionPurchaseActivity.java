@@ -696,7 +696,7 @@ public class TransactionPurchaseActivity extends BaseActivity implements MyDataA
 
 
                 nsLedgerId = data.getStringExtra("nsId");
-                txtLedgerName.setText(data.getStringExtra("nsName")+area+city);
+                txtLedgerName.setText(data.getStringExtra("nsName"));
                 txtLedgerName.setError(null);
                 txtAutoCompleteInventoryName.requestFocus();
             }

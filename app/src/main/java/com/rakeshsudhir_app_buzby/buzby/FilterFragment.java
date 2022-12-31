@@ -1083,15 +1083,20 @@ public class FilterFragment extends Fragment {
             //initialize start - should be repeated in returnFragmentValues
 
 
-            final AppCompatAutoCompleteTextView txtArea,txtCity;
+            final AppCompatAutoCompleteTextView txtArea,txtCity,txtRangeFrom,txtRangeTo;
             txtArea = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtArea);
             txtCity = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtCity);
+            txtRangeFrom = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtRangeFrom);
+            txtRangeTo = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtRangeTo);
 
 
-            ImageView imgClearCity,imgClearArea;
+
+            ImageView imgClearCity,imgClearArea,imgClearRangeFrom,imgClearRangeTo;
 
             imgClearArea = (ImageView) v.findViewById(R.id.imgClearArea);
             imgClearCity = (ImageView) v.findViewById(R.id.imgClearCity);
+            imgClearRangeTo = (ImageView) v.findViewById(R.id.imgClearRangeTo);
+            imgClearRangeFrom = (ImageView) v.findViewById(R.id.imgClearRangeFrom);
 
             //initialize Ends
 
@@ -1104,6 +1109,14 @@ public class FilterFragment extends Fragment {
             if(!intent.getStringExtra("nsCityId").equals("")){
                 txtCity.setText(intent.getStringExtra("nsCity"));
                 nsCityId = intent.getStringExtra("nsCityId");
+            }
+
+            if(!intent.getStringExtra("nsRangefrom").equals("")){
+                txtRangeFrom.setText(intent.getStringExtra("nsRangefrom"));
+            }
+
+            if(!intent.getStringExtra("nsRangeTo").equals("")){
+                txtRangeTo.setText(intent.getStringExtra("nsRangeTo"));
             }
 
             txtArea.setOnClickListener(new View.OnClickListener() {
@@ -1141,6 +1154,23 @@ public class FilterFragment extends Fragment {
                     txtCity.setText("");
                     nsCityId="";
                     nsCity="";
+                }
+            });
+
+
+            imgClearRangeFrom.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    txtRangeFrom.setText("");
+
+                }
+            });
+
+            imgClearRangeTo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    txtRangeTo.setText("");
+
                 }
             });
 
@@ -1658,15 +1688,20 @@ public class FilterFragment extends Fragment {
             //initialize start - should be repeated in returnFragmentValues
 
 
-            final AppCompatAutoCompleteTextView txtArea,txtCity;
+            final AppCompatAutoCompleteTextView txtArea,txtCity,txtRangeFrom,txtRangeTo;
             txtArea = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtArea);
             txtCity = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtCity);
+            txtRangeFrom = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtRangeFrom);
+            txtRangeTo = (AppCompatAutoCompleteTextView) v.findViewById(R.id.txtRangeTo);
 
 
-            ImageView imgClearCity,imgClearArea;
+
+            ImageView imgClearCity,imgClearArea,imgClearRangeFrom,imgClearRangeTo;
 
             imgClearArea = (ImageView) v.findViewById(R.id.imgClearArea);
             imgClearCity = (ImageView) v.findViewById(R.id.imgClearCity);
+            imgClearRangeTo = (ImageView) v.findViewById(R.id.imgClearRangeTo);
+            imgClearRangeFrom = (ImageView) v.findViewById(R.id.imgClearRangeFrom);
 
             //initialize Ends
 
@@ -1685,6 +1720,19 @@ public class FilterFragment extends Fragment {
                 bundle.putString("nsCity", "");
                 bundle.putString("nsCityId", "");
             }
+
+            if(!txtRangeFrom.getText().toString().equals("")){
+                bundle.putString("nsRangefrom", txtRangeFrom.getText().toString());
+            }else{
+                bundle.putString("nsRangefrom", "");
+            }
+
+            if(!txtRangeTo.getText().toString().equals("")){
+                bundle.putString("nsRangeTo", txtRangeTo.getText().toString());
+            }else{
+                bundle.putString("nsRangeTo", "");
+            }
+
         }
         return bundle;
     }

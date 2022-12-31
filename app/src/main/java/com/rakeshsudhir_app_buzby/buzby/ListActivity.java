@@ -596,6 +596,8 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
             filterIntent.putExtra("nsArea", "");
             filterIntent.putExtra("nsCityId", "");
             filterIntent.putExtra("nsCity", "");
+            filterIntent.putExtra("nsRangefrom", "");
+            filterIntent.putExtra("nsRangeTo", "");
 
 
         }
@@ -625,6 +627,7 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
 
                     case R.id.action_excel:
                         if(nsModule.equals("report_consolidated_ledger_balance")){
+                            //ExportDataGeneral.exportToCSV(ListActivity.this,jsonExcelData,"LEdger Balance");
                             ExportDataGeneral.exportToCSV(ListActivity.this,jsonExcelData,"Ledger Balance Report");
                         }else if(nsModule.equals("report_ledger_transaction")) {
                             ExportDataToExcel();
@@ -739,7 +742,7 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
                     @Override
                     public void onResponse(String response) {
 
-                        //DialogUtility.showDialog(ListActivity.this,response,"");
+                        //DialogUtility.showDialog(ListActivity.this,nsModule,"");
                         try {
                             if(response.length()>=5 && response.substring(0,5).equals("Error")){
                                 DialogUtility.showDialog(ListActivity.this,response,"Error");
@@ -1004,6 +1007,7 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
                                             JSONObject obj = jsonData.getJSONObject(i);
                                             JSONObject objExcel = new JSONObject();
                                             objExcel.put("SNO",(i+1));
+                                            objExcel.put("Days",obj.getString("nsDiff"));
                                             objExcel.put("CATEGORY",obj.getString("nsLedgerCategory"));
                                             objExcel.put("NAME",obj.getString("nsName"));
                                             if(obj.isNull("nsArea")){
@@ -1495,7 +1499,16 @@ public class ListActivity extends AppCompatActivity implements MyDataAdapter.myA
                         params.put("prCityId",filterIntent.getStringExtra("nsCityId"));
                     }
 
+                    if(!filterIntent.getStringExtra("nsRangefrom").equals("")){
+                        params.put("prRangeFrom",filterIntent.getStringExtra("nsRangefrom"));
+                    }
+
+                    if(!filterIntent.getStringExtra("nsRangeTo").equals("")){
+                        params.put("prRangeTo",filterIntent.getStringExtra("nsRangeTo"));
+                    }
+
                     params.put("functionality", "fetch_consolidated_ledger_balance_report");
+
                 }else if(nsModule.equals("fetch_inventory_detailed_report")){
                     params.put("module", "master_reports");
                     params.put("functionality", "fetch_inventory_detailed_report");
