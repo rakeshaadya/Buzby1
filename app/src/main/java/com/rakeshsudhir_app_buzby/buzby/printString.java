@@ -242,14 +242,33 @@ public class printString {
             BILL = BILL + "\n" + String.format("%1$19s %2$11s", "", "--------");
             if (objData.getInt("nsIsRestricted") == 2) {
                 BILL = BILL + "\n" + String.format("%1$19s %2$11s", "Balance : ", String.valueOf(remBal));
-            }/*else{
-                BILL = BILL + "\n" + String.format("%1$19s %2$11s", "Balance : ", String.valueOf(remBal));
-            }*/
 
-            BILL = BILL
-                    + "\n-------------------------------";
+                if(remBal>0){
+                    BILL = BILL
+                            + "\n-------------------------------";
+                    BILL = BILL + "\n\nNote: REQUEST YOU TO CLEAR BALANCE\n     SAME DAY OF BILLING DATE\n";
+                }
 
-            BILL = BILL + "\n\n\n\n\n\n\n\n\n";
+                if(!objData.isNull("nsWishes") && !objData.getString("nsWishes").equals("")) {
+                    BILL = BILL
+                            + "\n-------------------------------";
+                    BILL = BILL
+                            + "\n     **" + objData.getString("nsWishes")+"**";
+                }else{
+                    BILL = BILL
+                            + "\n-------------------------------";
+
+                    BILL = BILL + "\n\n\n\n";
+                }
+
+            }else{
+                BILL = BILL
+                        + "\n-------------------------------";
+
+                BILL = BILL + "\n\n\n\n\n\n\n\n\n";
+            }
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -391,15 +410,31 @@ public class printString {
                 }
 
                 if(balance>0){
-                    BILL = BILL + "\n\nNote: Request you to clear Balance\n     within 10days of Billing Date";
+                    BILL = BILL
+                            + "\n-------------------------------";
+                    BILL = BILL + "\n\nNote: REQUEST YOU TO CLEAR BALANCE\n     SAME DAY OF BILLING DATE\n";
                 }
 
+                if(!objData.isNull("nsWishes") && !objData.getString("nsWishes").equals("")) {
+                    BILL = BILL
+                            + "\n-------------------------------";
+                    BILL = BILL
+                            + "\n     **" + objData.getString("nsWishes")+"**";
 
-                BILL = BILL
-                        + "\n-------------------------------";
+                    BILL = BILL
+                            + "\n-------------------------------";
 
 
-                BILL = BILL + "\n\n\n\n\n\n\n\n\n";
+                    BILL = BILL + "\n\n\n\n";
+                }else {
+
+
+                    BILL = BILL
+                            + "\n-------------------------------";
+
+
+                    BILL = BILL + "\n\n\n\n\n\n\n\n\n";
+                }
 
             }
 
